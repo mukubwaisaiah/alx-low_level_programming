@@ -1,18 +1,37 @@
+/* main.h */
+#ifndef MAIN_H
+#define MAIN_H
+
+int _putchar(char c);
+void print_diagonal(int n);
+
+#endif /* MAIN_H */
+
+/* 7-print_diagonal.c */
 #include "main.h"
 
 /**
- * print_most_numbers - prints numbers from 0 to 9, excluding 2 and 4
+ * print_diagonal - Draws a diagonal line in the terminal.
+ * @n: The number of times the character \ should be printed.
  */
-void print_most_numbers(void)
+void print_diagonal(int n)
 {
-    int num;
+    int i, j;
 
-    for (num = 0; num <= 9; num++)
+    if (n <= 0)
     {
-        if (num != 2 && num != 4)
-            _putchar(num + '0');
+        _putchar('\n');
+        return;
     }
 
-    _putchar('\n');
+    for (i = 0; i < n; i++)
+    {
+        for (j = 0; j < i; j++)
+        {
+            _putchar(' ');
+        }
+        _putchar('\\');
+        _putchar('\n');
+    }
 }
 
