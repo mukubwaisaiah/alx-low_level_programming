@@ -1,14 +1,21 @@
+/* main.h */
+#ifndef MAIN_H
+#define MAIN_H
+
+int _putchar(char c);
+void more_numbers(void);
+
+#endif /* MAIN_H */
+
+/* 5-more_numbers.c */
 #include "main.h"
 
 /**
- * print_numbers - prints numbers from 0 to 9, followed by a new line
+ * more_numbers - Prints the numbers from 0 to 14, ten times, followed by a new line.
  */
-void print_numbers(void)
+void more_numbers(void)
 {
-    int num;
+    int num, count;
 
-    for (num = 0; num <= 9; num++)
-        _putchar(num + '0');
+    for (count = 0; count < 10;
 
-    _putchar('\n');
-}
