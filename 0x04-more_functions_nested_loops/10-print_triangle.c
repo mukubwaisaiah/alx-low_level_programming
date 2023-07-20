@@ -1,17 +1,43 @@
+/* main.h */
+#ifndef MAIN_H
+#define MAIN_H
+
+int _putchar(char c);
+void print_triangle(int size);
+
+#endif /* MAIN_H */
+
+/* 10-print_triangle.c */
 #include "main.h"
 
 /**
- * print_line - prints a straight line of underscores, followed by a new line
- * @n: The number of underscores to print
+ * print_triangle - Prints a triangle, followed by a new line.
+ * @size: The size of the triangle.
  */
-void print_line(int n)
+void print_triangle(int size)
 {
-    int i;
+    int i, j;
 
-    if (n > 0)
+    if (size <= 0)
     {
-        for (i = 0; i < n; i++)
-            _putchar('_');
+        _putchar('\n');
+        return;
     }
-    _put
+
+    for (i = 0; i < size; i++)
+    {
+        for (j = 0; j < size; j++)
+        {
+            if (j >= size - i - 1)
+            {
+                _putchar('#');
+            }
+            else
+            {
+                _putchar(' ');
+            }
+        }
+        _putchar('\n');
+    }
+}
 
